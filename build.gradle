@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly group: 'org.apache.hadoop', name: 'hadoop-common', version: '3.3.0'
+    compileOnly group: 'org.apache.hadoop', name: 'hadoop-hdfs', version: '3.3.0'
+    compileOnly group: 'org.apache.hadoop', name: 'hadoop-mapreduce-client-core', version: '3.3.0'
+    compile group: 'org.json', name: 'json', version: '20201115'
+}
+
+test {
+    useJUnitPlatform()
+}
